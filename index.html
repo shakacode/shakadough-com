@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ShakaDough — The aloha sourdough</title>
+<meta name="description" content="ShakaDough is a small, naturally leavened bakery on the north shore of Maui. Wild starter raised in trade winds. Organic high-protein flour. Loaves and bagels, by subscription." />
+<meta name="theme-color" content="#f4ebd6" />
+
+<meta property="og:title" content="ShakaDough — The aloha sourdough" />
+<meta property="og:description" content="A small, naturally leavened bakery on the north shore of Maui. Loaves and bagels, by subscription." />
+<meta property="og:image" content="/assets/shakadough-logo.png" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" type="image/png" href="/assets/shakadough-logo.png" />
+<link rel="apple-touch-icon" href="/assets/shakadough-logo.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Sacramento&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+<!-- =============== NAV =============== -->
+<nav class="nav">
+  <div class="container nav-row">
+    <a href="#top" class="nav-brand" aria-label="ShakaDough home">
+      <img src="/assets/shakadough-logo.png" alt="" />
+      <span class="wm">Shaka<em>Dough</em></span>
+    </a>
+    <div class="nav-links">
+      <a href="#bread">The Bread</a>
+      <a href="#starter">The Starter</a>
+      <a href="#how">How It Works</a>
+      <a href="#manoela">Manoela</a>
+      <a href="#subscribe" class="btn-tan">Subscribe</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile">Menu</button>
+  </div>
+  <div class="nav-mobile container" id="nav-mobile" hidden>
+    <a href="#bread">The Bread</a>
+    <a href="#starter">The Starter</a>
+    <a href="#how">How It Works</a>
+    <a href="#manoela">Manoela</a>
+    <a href="#subscribe" class="btn-tan">Subscribe</a>
+  </div>
+</nav>
+
+<!-- =============== HERO =============== -->
+<section id="top" class="hero grain">
+  <!-- bg botanicals: Palm tree (left), Hibiscus (right) -->
+  <div class="hero-decor left sway" aria-hidden="true">
+    <svg viewBox="0 0 200 360" width="176" fill="none" stroke="var(--teal)" stroke-width="2.5" stroke-linecap="round">
+      <path d="M 100 350 Q 90 280, 95 200 Q 100 130, 110 90"></path>
+      <path d="M 110 90 Q 60 60, 10 70 M 30 65 L 25 78 M 50 62 L 47 77 M 70 65 L 68 80"></path>
+      <path d="M 110 90 Q 130 30, 180 20 M 145 30 L 140 45 M 160 25 L 158 42 M 175 22 L 173 38"></path>
+      <path d="M 110 90 Q 80 40, 40 30 M 60 38 L 56 52 M 80 45 L 76 60"></path>
+      <path d="M 110 90 Q 150 60, 195 75 M 165 70 L 167 84 M 180 73 L 184 86"></path>
+      <path d="M 110 90 Q 100 50, 95 10 M 100 30 L 110 35 M 98 50 L 110 52"></path>
+      <path d="M 110 90 Q 130 90, 190 110 M 150 95 L 154 108 M 170 100 L 174 113"></path>
+      <circle cx="103" cy="100" r="5" fill="var(--teal)"></circle>
+      <circle cx="115" cy="103" r="5" fill="var(--teal)"></circle>
+      <circle cx="108" cy="110" r="5" fill="var(--teal)"></circle>
+    </svg>
+  </div>
+  <div class="hero-decor right sway" aria-hidden="true">
+    <svg viewBox="0 0 200 220" width="130" height="130">
+      <g transform="translate(100 110)">
+        <g transform="rotate(0)"><path d="M 0 0 C -28 -8, -50 -30, -48 -68 C -42 -100, -10 -100, 8 -78 C 26 -52, 22 -22, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+        <g transform="rotate(72)"><path d="M 0 0 C -28 -8, -50 -30, -48 -68 C -42 -100, -10 -100, 8 -78 C 26 -52, 22 -22, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+        <g transform="rotate(144)"><path d="M 0 0 C -28 -8, -50 -30, -48 -68 C -42 -100, -10 -100, 8 -78 C 26 -52, 22 -22, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+        <g transform="rotate(216)"><path d="M 0 0 C -28 -8, -50 -30, -48 -68 C -42 -100, -10 -100, 8 -78 C 26 -52, 22 -22, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+        <g transform="rotate(288)"><path d="M 0 0 C -28 -8, -50 -30, -48 -68 C -42 -100, -10 -100, 8 -78 C 26 -52, 22 -22, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+        <circle r="9" fill="var(--teal)" stroke="var(--tan-deep)" stroke-width="1"></circle>
+      </g>
+    </svg>
+  </div>
+
+  <div class="container hero-inner">
+    <p class="hero-greeting">aloha mai kākou,</p>
+
+    <img src="/assets/shakadough-logo.png" alt="ShakaDough — The Aloha Sourdough" class="hero-logo bob" width="540" height="540" />
+
+    <p class="hero-lede">
+      A small, naturally leavened bakery on the north shore of <strong>Maui</strong>. Wild starter raised in trade winds. Organic high-protein flour. Loaves and bagels, by subscription.
+    </p>
+
+    <div class="hero-ctas">
+      <a href="#subscribe" class="btn-tan">Claim a loaf →</a>
+      <a href="#bread" class="btn-teal-outline">See the menu</a>
+    </div>
+
+    <div class="hero-meta">
+      <span class="dot">●</span>
+      <span>Paia, Maui</span>
+      <span class="sep">/</span>
+      <span>Weekly bake days</span>
+      <span class="sep">/</span>
+      <span>Opening in waves</span>
+    </div>
+
+    <div class="hero-photos">
+      <img src="/img/IMG_2809.jpg" alt="A scored sourdough boule on parchment, with the Wahine starter jar in the background." loading="lazy" />
+      <img src="/img/IMG_3298.jpg" alt="Top-down country loaf with leaf-pattern scoring." loading="lazy" />
+      <img src="/img/IMG_3411.jpg" alt="A rack of golden sourdough bagels." loading="lazy" />
+    </div>
+  </div>
+
+  <!-- Diamond Head silhouette band -->
+  <div class="diamond-band" aria-hidden="true">
+    <svg viewBox="0 0 600 200" preserveAspectRatio="none">
+      <path d="M 0 200 L 0 160 Q 80 150, 150 130 Q 220 105, 280 70 Q 320 50, 360 65 Q 410 85, 470 110 Q 540 140, 600 145 L 600 200 Z" fill="var(--teal)" opacity="0.85"></path>
+      <path d="M 0 162 Q 80 152, 150 132 Q 220 107, 280 72 Q 320 52, 360 67 Q 410 87, 470 112 Q 540 142, 600 147" stroke="var(--teal-deep)" stroke-width="1.5" fill="none"></path>
+    </svg>
+  </div>
+
+  <!-- Wave bottom -->
+  <div class="wave-band">
+    <div class="wave-track wave-track-wrap">
+      <svg viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M 0 40 Q 75 10, 150 40 T 300 40 T 450 40 T 600 40 T 750 40 T 900 40 T 1050 40 T 1200 40 L 1200 80 L 0 80 Z" fill="var(--teal-deep)"></path>
+        <path d="M 0 50 Q 75 25, 150 50 T 300 50 T 450 50 T 600 50 T 750 50 T 900 50 T 1050 50 T 1200 50" fill="none" stroke="var(--cream)" stroke-width="1.5" opacity="0.55"></path>
+      </svg>
+      <svg viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M 0 40 Q 75 10, 150 40 T 300 40 T 450 40 T 600 40 T 750 40 T 900 40 T 1050 40 T 1200 40 L 1200 80 L 0 80 Z" fill="var(--teal-deep)"></path>
+        <path d="M 0 50 Q 75 25, 150 50 T 300 50 T 450 50 T 600 50 T 750 50 T 900 50 T 1050 50 T 1200 50" fill="none" stroke="var(--cream)" stroke-width="1.5" opacity="0.55"></path>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- =============== TICKER =============== -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="ticker"></div>
+</div>
+
+<!-- =============== BREAD =============== -->
+<section id="bread" class="bread grain section">
+  <div class="bread-decor sway" aria-hidden="true">
+    <svg viewBox="0 0 200 200" width="90" height="90">
+      <g transform="translate(100 100)">
+        <g transform="rotate(0)"><path d="M 0 0 C -22 -10, -32 -40, -22 -68 C -10 -85, 14 -82, 22 -60 C 28 -38, 18 -14, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+        <g transform="rotate(72)"><path d="M 0 0 C -22 -10, -32 -40, -22 -68 C -10 -85, 14 -82, 22 -60 C 28 -38, 18 -14, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+        <g transform="rotate(144)"><path d="M 0 0 C -22 -10, -32 -40, -22 -68 C -10 -85, 14 -82, 22 -60 C 28 -38, 18 -14, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+        <g transform="rotate(216)"><path d="M 0 0 C -22 -10, -32 -40, -22 -68 C -10 -85, 14 -82, 22 -60 C 28 -38, 18 -14, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+        <g transform="rotate(288)"><path d="M 0 0 C -22 -10, -32 -40, -22 -68 C -10 -85, 14 -82, 22 -60 C 28 -38, 18 -14, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+        <circle r="13" fill="#f0d680" stroke="var(--tan-deep)" stroke-width="1.2"></circle>
+      </g>
+    </svg>
+  </div>
+
+  <div class="container bread-inner">
+    <div class="section-head">
+      <span class="pill">I. The Bread</span>
+      <h2>Two things. <em>Both sourdough.</em></h2>
+      <p class="sub">Both made the slow way.</p>
+    </div>
+
+    <!-- Loaf -->
+    <div class="bread-card">
+      <div class="bread-photo">
+        <img src="/img/IMG_3298.jpg" alt="A scored country loaf with leaf-pattern decoration." loading="lazy" />
+        <span class="pill stamp left">No. 01</span>
+      </div>
+      <div class="bread-copy">
+        <h3>The Country Loaf</h3>
+        <p class="sub">pan rustique</p>
+        <p>Organic high-protein flour, sea salt, water, wild starter. That is the entire ingredient list. Three days from feed to oven. A dark blistered crust, an open custardy crumb, the kind of tang that means time was taken. Holds up to good butter and to nothing at all.</p>
+        <div class="pills">
+          <span class="pill">1 kg boule</span>
+          <span class="pill">72 hr cold ferment</span>
+          <span class="pill">Naturally leavened</span>
+          <span class="pill">Vegan</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bagel -->
+    <div class="bread-card flip" style="margin-top: 64px;">
+      <div class="bread-copy">
+        <h3>The Bagel</h3>
+        <p class="sub">boiled, not steamed</p>
+        <p>A real bagel. Boiled in barley malt water, then baked dark. Chewy in the middle, crackled and shiny on the outside. For the diaspora who moved to Maui and started forgetting what Sunday morning used to taste like. Plain, sesame, or everything.</p>
+        <div class="pills">
+          <span class="pill">Half-dozen</span>
+          <span class="pill">Hand-rolled</span>
+          <span class="pill">Boiled in malt</span>
+          <span class="pill">Plain · Sesame · Everything</span>
+        </div>
+      </div>
+      <div class="bread-photo bagel-bg">
+        <img src="/img/IMG_3411.jpg" alt="A rack of golden hand-rolled sourdough bagels." loading="lazy" />
+        <span class="pill stamp right">No. 02</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== STARTER =============== -->
+<section id="starter" class="starter">
+  <svg class="starter-decor-1 sway" viewBox="0 0 200 240" aria-hidden="true">
+    <g fill="none" stroke="var(--teal-soft)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M 100 230 C 60 220, 30 180, 25 130 C 22 80, 50 30, 100 15 C 150 30, 178 80, 175 130 C 170 180, 140 220, 100 230 Z" fill="var(--teal-soft)" fill-opacity="0.18"></path>
+      <path d="M 100 230 L 100 30"></path>
+      <path d="M 100 60 Q 70 65, 60 90"></path>
+      <path d="M 100 95 Q 60 100, 45 130"></path>
+      <path d="M 100 130 Q 55 135, 40 165"></path>
+      <path d="M 100 165 Q 60 170, 55 195"></path>
+      <path d="M 100 60 Q 130 65, 140 90"></path>
+      <path d="M 100 95 Q 140 100, 155 130"></path>
+      <path d="M 100 130 Q 145 135, 160 165"></path>
+      <path d="M 100 165 Q 140 170, 145 195"></path>
+    </g>
+  </svg>
+  <svg class="starter-decor-2 sway" viewBox="0 0 200 240" aria-hidden="true">
+    <g fill="none" stroke="var(--tan-soft)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M 100 230 C 60 220, 30 180, 25 130 C 22 80, 50 30, 100 15 C 150 30, 178 80, 175 130 C 170 180, 140 220, 100 230 Z" fill="var(--tan-soft)" fill-opacity="0.18"></path>
+      <path d="M 100 230 L 100 30"></path>
+      <path d="M 100 60 Q 70 65, 60 90"></path>
+      <path d="M 100 95 Q 60 100, 45 130"></path>
+      <path d="M 100 130 Q 55 135, 40 165"></path>
+      <path d="M 100 165 Q 60 170, 55 195"></path>
+      <path d="M 100 60 Q 130 65, 140 90"></path>
+      <path d="M 100 95 Q 140 100, 155 130"></path>
+      <path d="M 100 130 Q 145 135, 160 165"></path>
+      <path d="M 100 165 Q 140 170, 145 195"></path>
+    </g>
+  </svg>
+
+  <div class="container starter-inner">
+    <span class="pill">II. The Starter</span>
+    <h2>Her name is <em>Wahine.</em></h2>
+    <p class="lede">She lives in a jar on the kitchen counter, older than the bakery itself.</p>
+
+    <div class="starter-grid">
+      <p>She started in a coffee cup in a Paia kitchen, took two weeks to wake up, and has been bubbling ever since. We feed her every morning. She is a little bit of family.</p>
+      <p>The trade winds blow through screened windows night and day. Whatever lives in the air on this island, she has caught and kept. Mango blossom. Salt mist. The yeast that drifts off the cane fields after a burn. <strong>That is the flavor in your bread.</strong> It is not from anywhere else.</p>
+    </div>
+
+    <div class="starter-coords">
+      <svg width="70" height="70" viewBox="0 0 200 200" aria-hidden="true">
+        <g transform="translate(100 100)">
+          <g transform="rotate(0)"><path d="M 0 0 C -22 -10, -32 -40, -22 -68 C -10 -85, 14 -82, 22 -60 C 28 -38, 18 -14, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+          <g transform="rotate(72)"><path d="M 0 0 C -22 -10, -32 -40, -22 -68 C -10 -85, 14 -82, 22 -60 C 28 -38, 18 -14, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+          <g transform="rotate(144)"><path d="M 0 0 C -22 -10, -32 -40, -22 -68 C -10 -85, 14 -82, 22 -60 C 28 -38, 18 -14, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+          <g transform="rotate(216)"><path d="M 0 0 C -22 -10, -32 -40, -22 -68 C -10 -85, 14 -82, 22 -60 C 28 -38, 18 -14, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+          <g transform="rotate(288)"><path d="M 0 0 C -22 -10, -32 -40, -22 -68 C -10 -85, 14 -82, 22 -60 C 28 -38, 18 -14, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+          <circle r="13" fill="#f0d680" stroke="var(--tan-deep)" stroke-width="1.2"></circle>
+        </g>
+      </svg>
+      <div>
+        <div class="meta">20.9° N · 156.4° W</div>
+        <div class="terroir">terroir, in flour form</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== HOW IT WORKS =============== -->
+<section id="how" class="how grain section">
+  <div class="container how-inner">
+    <div class="how-head">
+      <div>
+        <span class="pill">III. The Subscription</span>
+        <h2>How the bread <em>finds you.</em></h2>
+      </div>
+      <p>The honest version of a subscription. No marketing tricks. Built for an island that knows when something is real and when it is not.</p>
+    </div>
+
+    <ol class="how-steps">
+      <li>
+        <div class="row"><span class="num">01</span><h3>Pick a rhythm</h3></div>
+        <p>Weekly or every other week. One loaf, two loaves, half-dozen bagels, or the whole bundle.</p>
+      </li>
+      <li>
+        <div class="row"><span class="num">02</span><h3>Pickup or delivery</h3></div>
+        <p>Pickup at a north shore handoff point on bake day. Delivery on the north shore corridor between Kahului and Hāna side, within a defined radius.</p>
+      </li>
+      <li>
+        <div class="row"><span class="num">03</span><h3>Bake day</h3></div>
+        <p>Loaves come out of the oven in the morning. They reach you the same day, still warm enough to fog the bag.</p>
+      </li>
+      <li>
+        <div class="row"><span class="num">04</span><h3>Skip, pause, cancel</h3></div>
+        <p>Going off island? Skip. Friends visiting? Add a loaf. Cancel anytime, no quiz, no guilt.</p>
+      </li>
+    </ol>
+
+    <div class="how-callout">
+      <svg width="60" height="60" viewBox="0 0 200 200" aria-hidden="true" style="flex-shrink:0;">
+        <g transform="translate(100 100)">
+          <g transform="rotate(0)"><path d="M 0 0 C -22 -10, -32 -40, -22 -68 C -10 -85, 14 -82, 22 -60 C 28 -38, 18 -14, 0 0 Z" fill="var(--cream)" stroke="var(--teal-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+          <g transform="rotate(72)"><path d="M 0 0 C -22 -10, -32 -40, -22 -68 C -10 -85, 14 -82, 22 -60 C 28 -38, 18 -14, 0 0 Z" fill="var(--cream)" stroke="var(--teal-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+          <g transform="rotate(144)"><path d="M 0 0 C -22 -10, -32 -40, -22 -68 C -10 -85, 14 -82, 22 -60 C 28 -38, 18 -14, 0 0 Z" fill="var(--cream)" stroke="var(--teal-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+          <g transform="rotate(216)"><path d="M 0 0 C -22 -10, -32 -40, -22 -68 C -10 -85, 14 -82, 22 -60 C 28 -38, 18 -14, 0 0 Z" fill="var(--cream)" stroke="var(--teal-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+          <g transform="rotate(288)"><path d="M 0 0 C -22 -10, -32 -40, -22 -68 C -10 -85, 14 -82, 22 -60 C 28 -38, 18 -14, 0 0 Z" fill="var(--cream)" stroke="var(--teal-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+          <circle r="13" fill="#f0d680" stroke="var(--teal-deep)" stroke-width="1.2"></circle>
+        </g>
+      </svg>
+      <p>Pickup spots, delivery zones, prices, and bake days are still being finalized. Drop your email below and you will be the first to know exactly when, where, and how much.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =============== FOUNDER =============== -->
+<section id="manoela" class="founder grain section">
+  <div class="founder-decor sway" aria-hidden="true">
+    <svg viewBox="0 0 200 220" width="130" height="130">
+      <g transform="translate(100 110)">
+        <g transform="rotate(0)"><path d="M 0 0 C -28 -8, -50 -30, -48 -68 C -42 -100, -10 -100, 8 -78 C 26 -52, 22 -22, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+        <g transform="rotate(72)"><path d="M 0 0 C -28 -8, -50 -30, -48 -68 C -42 -100, -10 -100, 8 -78 C 26 -52, 22 -22, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+        <g transform="rotate(144)"><path d="M 0 0 C -28 -8, -50 -30, -48 -68 C -42 -100, -10 -100, 8 -78 C 26 -52, 22 -22, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+        <g transform="rotate(216)"><path d="M 0 0 C -28 -8, -50 -30, -48 -68 C -42 -100, -10 -100, 8 -78 C 26 -52, 22 -22, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+        <g transform="rotate(288)"><path d="M 0 0 C -28 -8, -50 -30, -48 -68 C -42 -100, -10 -100, 8 -78 C 26 -52, 22 -22, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+        <circle r="9" fill="var(--teal)" stroke="var(--tan-deep)" stroke-width="1"></circle>
+      </g>
+    </svg>
+  </div>
+
+  <div class="founder-inner">
+    <span class="pill">IV. From the Baker</span>
+    <h2>A note from <em>Manoela.</em></h2>
+    <div class="meta">Baker · Owner · The whole staff</div>
+
+    <div class="founder-quote">
+      <div class="mark" aria-hidden="true">“</div>
+      <div class="body">
+        <p>I grew up eating bread that meant something. Then I moved to Maui, and for a long time I could not find it. So I learned to bake. Badly at first. Then less badly. Then, after enough Saturdays, well enough that friends started asking if they could buy a loaf.</p>
+        <p>ShakaDough is what happened next. It is a one-person bakery, run out of a small kitchen in Paia, with one oven and one starter and a lot of patience. There is no shop yet. Maybe there will be. For now, there is bread on bake day, and a list of people waiting for it.</p>
+        <p>If you are on this page, you are probably one of those people. Mahalo for being early. I will not let you down.</p>
+        <p class="signature">Aloha, Manoela</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== SUBSCRIBE =============== -->
+<section id="subscribe" class="subscribe">
+  <div class="top-wave" aria-hidden="true">
+    <div class="wave-track wave-track-wrap">
+      <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+        <path d="M 0 40 Q 75 10, 150 40 T 300 40 T 450 40 T 600 40 T 750 40 T 900 40 T 1050 40 T 1200 40 L 1200 80 L 0 80 Z" fill="var(--teal)"></path>
+      </svg>
+      <svg viewBox="0 0 1200 80" preserveAspectRatio="none">
+        <path d="M 0 40 Q 75 10, 150 40 T 300 40 T 450 40 T 600 40 T 750 40 T 900 40 T 1050 40 T 1200 40 L 1200 80 L 0 80 Z" fill="var(--teal)"></path>
+      </svg>
+    </div>
+  </div>
+  <svg class="decor" viewBox="0 0 200 200" aria-hidden="true">
+    <g transform="translate(100 100)">
+      <g transform="rotate(0)"><path d="M 0 0 C -22 -10, -32 -40, -22 -68 C -10 -85, 14 -82, 22 -60 C 28 -38, 18 -14, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+      <g transform="rotate(72)"><path d="M 0 0 C -22 -10, -32 -40, -22 -68 C -10 -85, 14 -82, 22 -60 C 28 -38, 18 -14, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+      <g transform="rotate(144)"><path d="M 0 0 C -22 -10, -32 -40, -22 -68 C -10 -85, 14 -82, 22 -60 C 28 -38, 18 -14, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+      <g transform="rotate(216)"><path d="M 0 0 C -22 -10, -32 -40, -22 -68 C -10 -85, 14 -82, 22 -60 C 28 -38, 18 -14, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+      <g transform="rotate(288)"><path d="M 0 0 C -22 -10, -32 -40, -22 -68 C -10 -85, 14 -82, 22 -60 C 28 -38, 18 -14, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+      <circle r="13" fill="#f0d680" stroke="var(--tan-deep)" stroke-width="1.2"></circle>
+    </g>
+  </svg>
+
+  <div class="container subscribe-inner">
+    <div class="subscribe-grid">
+      <div class="subscribe-intro">
+        <span class="pill">V. The Wave List</span>
+        <h2>Hold a <em>loaf</em> for me.</h2>
+        <p>Subscriptions open in waves so we can actually keep up. Drop your email and your side of the island. We reach out before the next bake day.</p>
+      </div>
+
+      <div>
+        <form id="subscribe-form" class="subscribe-form" novalidate>
+          <div class="row-2">
+            <div>
+              <label for="name">Your name</label>
+              <input id="name" name="name" class="field" placeholder="What should I call you?" autocomplete="name" />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" class="field" placeholder="you@somewhere.com" autocomplete="email" required />
+              <div class="err" id="email-err" hidden>※ That email needs another look.</div>
+            </div>
+          </div>
+
+          <div>
+            <label>How would you like the bread?</label>
+            <div class="plan-grid" id="plan-grid">
+              <button type="button" class="plan-card selected" data-plan="loaf-weekly">
+                <div class="t">Loaf, weekly</div><div class="s">1 boule / 7 days</div>
+              </button>
+              <button type="button" class="plan-card" data-plan="loaf-biweekly">
+                <div class="t">Loaf, every 2 weeks</div><div class="s">Easier rhythm</div>
+              </button>
+              <button type="button" class="plan-card" data-plan="bagels-weekly">
+                <div class="t">Bagels, weekly</div><div class="s">Half-dozen / Sundays</div>
+              </button>
+              <button type="button" class="plan-card" data-plan="bundle">
+                <div class="t">The whole bundle</div><div class="s">Loaf + bagels</div>
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <label>Where on the north shore?</label>
+            <div class="zone-row" id="zone-row">
+              <button type="button" class="zone-btn selected" data-zone="paia">Paia</button>
+              <button type="button" class="zone-btn" data-zone="haiku">Haiku</button>
+              <button type="button" class="zone-btn" data-zone="kuau">Kuau</button>
+              <button type="button" class="zone-btn" data-zone="other">Somewhere else</button>
+            </div>
+          </div>
+
+          <div class="subscribe-footer">
+            <p class="nospam">No spam, ever.</p>
+            <button type="submit" class="btn-tan">Hold my loaf →</button>
+          </div>
+        </form>
+
+        <div id="subscribe-success" class="subscribe-success hidden" aria-live="polite">
+          <svg class="corner sway" viewBox="0 0 200 220" width="140" aria-hidden="true">
+            <g transform="translate(100 110)">
+              <g transform="rotate(0)"><path d="M 0 0 C -28 -8, -50 -30, -48 -68 C -42 -100, -10 -100, 8 -78 C 26 -52, 22 -22, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+              <g transform="rotate(72)"><path d="M 0 0 C -28 -8, -50 -30, -48 -68 C -42 -100, -10 -100, 8 -78 C 26 -52, 22 -22, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+              <g transform="rotate(144)"><path d="M 0 0 C -28 -8, -50 -30, -48 -68 C -42 -100, -10 -100, 8 -78 C 26 -52, 22 -22, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+              <g transform="rotate(216)"><path d="M 0 0 C -28 -8, -50 -30, -48 -68 C -42 -100, -10 -100, 8 -78 C 26 -52, 22 -22, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+              <g transform="rotate(288)"><path d="M 0 0 C -28 -8, -50 -30, -48 -68 C -42 -100, -10 -100, 8 -78 C 26 -52, 22 -22, 0 0 Z" fill="var(--tan-soft)" stroke="var(--tan-deep)" stroke-width="1.5" stroke-linejoin="round"></path></g>
+              <circle r="9" fill="var(--teal)" stroke="var(--tan-deep)" stroke-width="1"></circle>
+            </g>
+          </svg>
+          <span class="pill">✿ You are on the list</span>
+          <h3>Mahalo, <span id="success-name">friend</span>.</h3>
+          <p>Your loaf has a name on it now. We will write to <strong id="success-email">you</strong> before the next bake day with pickup details for <span id="success-zone">your area</span>.</p>
+          <div class="star">In the meantime, the starter is fed and bubbling.</div>
+          <button type="button" id="reset-form">↺ Add another</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============== FOOTER =============== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/shakadough-logo.png" alt="" />
+        <div>
+          <div class="wm">Shaka<em>Dough</em></div>
+          <div class="tag">the aloha sourdough.</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Where</h4>
+        <p>Paia, Maui<br/>Hawai‘i 96779<br/><span class="accent">North shore.</span></p>
+      </div>
+      <div class="footer-col">
+        <h4>Elsewhere</h4>
+        <ul>
+          <li><a href="https://instagram.com/shakadough" rel="me noopener">Instagram</a></li>
+          <li><a href="mailto:hello@shakadough.com">Email</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Status</h4>
+        <p>Subscriptions opening in waves<br/><span class="accent">spring 2026.</span></p>
+      </div>
+    </div>
+    <div class="footer-credits">
+      <span>© 2026 ShakaDough · Manoela, baker</span>
+      <span>Set in Pacifico, Sacramento, Work Sans &amp; JetBrains Mono</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/script.js" defer></script>
+</body>
+</html>

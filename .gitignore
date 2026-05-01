@@ -1,0 +1,11 @@
+.DS_Store
+node_modules/
+.wrangler/
+.dev.vars
+
+# Source-resolution photos (resized copies live in /img)
+photos/
+
+# Local-only design exploration artifacts
+artifacts/
+.Codex/
