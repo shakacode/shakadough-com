@@ -23,7 +23,7 @@ python3 -m http.server 8080
 This site has no build step, so Cloudflare Pages deploys the repo root
 directly.
 
-1. Push this repo to GitHub as `shakacode/shakadough.com`.
+1. Push this repo to GitHub as `shakacode/shakadough-com`.
 2. In Cloudflare → Pages → **Create project → Connect to Git**, pick the repo.
 3. Build settings:
    - **Framework preset:** None
