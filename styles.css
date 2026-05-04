@@ -234,21 +234,6 @@ a { color: inherit; }
 .hero-meta .dot { color: var(--tan-deep); }
 .hero-meta .sep { opacity: 0.4; }
 
-.hero-photos {
-  margin: 48px auto 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  max-width: 720px;
-}
-.hero-photos img {
-  aspect-ratio: 1 / 1;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  border-radius: 24px;
-  border: 1.5px solid var(--tan);
-}
-
 .diamond-band {
   position: relative;
   height: 128px;
