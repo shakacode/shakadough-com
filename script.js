@@ -83,11 +83,14 @@
       }
       emailErr.hidden = true;
 
+      const zoneLabels = {
+        paia: 'Paia',
+        haiku: 'Haiku',
+        kuau: 'Kuau',
+        other: 'your area',
+      };
       const zoneVal = getZone() || 'paia';
-      const zoneLabel =
-        zoneVal === 'other'
-          ? 'your area'
-          : zoneVal[0].toUpperCase() + zoneVal.slice(1);
+      const zoneLabel = zoneLabels[zoneVal] || 'your area';
 
       document.getElementById('success-name').textContent = name || 'friend';
       document.getElementById('success-email').textContent = email;
