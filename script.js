@@ -1,5 +1,12 @@
 // ShakaDough — small bits of vanilla JS
 (function () {
+  // Web3Forms public access key. Safe to expose: Web3Forms restricts
+  // submissions to the domain configured in their dashboard, and the
+  // recipient email is set on their side, so the key cannot be repurposed
+  // to send mail elsewhere.
+  const WEB3FORMS_ACCESS_KEY = 'f68adbac-5ff9-4c4f-9492-bd74b7e7d9f4';
+  const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
+
   // -------- Mobile nav toggle --------
   const toggle = document.getElementById('nav-toggle');
   const mobile = document.getElementById('nav-mobile');
@@ -71,8 +78,23 @@
   const reset = document.getElementById('reset-form');
   const emailErr = document.getElementById('email-err');
 
+  const formErr = document.getElementById('form-err');
+  const submitBtn = form && form.querySelector('button[type="submit"]');
+  const planLabels = {
+    'loaf-weekly': 'Loaf, weekly',
+    'loaf-biweekly': 'Loaf, every 2 weeks',
+    'bagels-weekly': 'Bagels, weekly',
+    bundle: 'The whole bundle',
+  };
+  const zoneLabels = {
+    paia: 'Paia',
+    haiku: 'Haiku',
+    kuau: 'Kuau',
+    other: 'Somewhere else',
+  };
+
   if (form && success) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const name = form.elements.namedItem('name').value.trim();
       const email = form.elements.namedItem('email').value.trim();
@@ -82,26 +104,71 @@
         return;
       }
       emailErr.hidden = true;
+      if (formErr) formErr.hidden = true;
 
-      const zoneLabels = {
-        paia: 'Paia',
-        haiku: 'Haiku',
-        kuau: 'Kuau',
-        other: 'your area',
-      };
       const zoneVal = getZone() || 'paia';
-      const zoneLabel = zoneLabels[zoneVal] || 'your area';
+      const zoneLabel = zoneLabels[zoneVal] || 'Somewhere else';
+      const successZone =
+        zoneVal === 'other' ? 'your area' : zoneLabel;
+      const planVal = getPlan() || 'loaf-weekly';
+      const planLabel = planLabels[planVal] || planVal;
 
-      document.getElementById('success-name').textContent = name || 'friend';
-      document.getElementById('success-email').textContent = email;
-      document.getElementById('success-zone').textContent = zoneLabel;
+      const originalLabel = submitBtn ? submitBtn.textContent : '';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+      }
 
-      // Plan + zone are visual-only at launch; once a backend exists, POST
-      // { name, email, plan: getPlan(), zone: getZone() } here.
+      try {
+        const payload = new FormData();
+        payload.set('access_key', WEB3FORMS_ACCESS_KEY);
+        payload.set(
+          'subject',
+          `ShakaDough Wave List — ${name || 'new signup'}`
+        );
+        payload.set('from_name', 'ShakaDough Wave List');
+        payload.set('replyto', email);
+        // Honeypot: real users won't fill this, bots that auto-fill every
+        // field will, and Web3Forms drops those submissions.
+        const botcheck = form.elements.namedItem('botcheck');
+        payload.set(
+          'botcheck',
+          botcheck && botcheck.checked ? 'true' : ''
+        );
+        payload.set('Name', name || '');
+        payload.set('Email', email);
+        payload.set('Plan', planLabel);
+        payload.set('Zone', zoneLabel);
 
-      form.classList.add('hidden');
-      success.classList.remove('hidden');
-      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const res = await fetch(WEB3FORMS_ENDPOINT, {
+          method: 'POST',
+          body: payload,
+        });
+        const json = await res.json().catch(() => ({}));
+        if (!res.ok || !json.success) {
+          throw new Error(json.message || 'Submission failed');
+        }
+
+        document.getElementById('success-name').textContent =
+          name || 'friend';
+        document.getElementById('success-email').textContent = email;
+        document.getElementById('success-zone').textContent = successZone;
+
+        form.classList.add('hidden');
+        success.classList.remove('hidden');
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } catch (err) {
+        if (formErr) {
+          formErr.textContent =
+            '※ Something went wrong on our end. Please try again, or email contact@shakadough.com directly.';
+          formErr.hidden = false;
+        }
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalLabel;
+        }
+      }
     });
   }
 
