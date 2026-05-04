@@ -6,6 +6,7 @@
     "enabled": true
   },
   "assets": {
+    // The repo root is the asset directory; .assetsignore whitelists public files.
     "directory": "."
   },
   "compatibility_flags": [
