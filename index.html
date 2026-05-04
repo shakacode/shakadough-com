@@ -404,10 +404,21 @@
             </div>
           </div>
 
+          <!-- Honeypot: bots that auto-fill every field will tick this; real users don't see it. Web3Forms drops submissions where it's set. -->
+          <input
+            type="checkbox"
+            name="botcheck"
+            tabindex="-1"
+            autocomplete="off"
+            aria-hidden="true"
+            style="position:absolute;left:-9999px;opacity:0;pointer-events:none;"
+          />
+
           <div class="subscribe-footer">
             <p class="nospam">No spam, ever.</p>
             <button type="submit" class="btn-tan">Hold my loaf →</button>
           </div>
+          <div class="form-error" id="form-err" role="alert" hidden></div>
         </form>
 
         <div id="subscribe-success" class="subscribe-success hidden" aria-live="polite">
