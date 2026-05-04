@@ -84,9 +84,9 @@
       emailErr.hidden = true;
 
       const zoneLabels = {
-        paia: 'Pāʻia',
-        haiku: 'Hāʻikū',
-        kuau: 'Kūʻau',
+        paia: 'Paia',
+        haiku: 'Haiku',
+        kuau: 'Kuau',
         other: 'your area',
       };
       const zoneVal = getZone() || 'paia';
