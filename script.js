@@ -53,7 +53,7 @@
     }
   }
 
-  // -------- Plan / zone selectors --------
+  // -------- Plan selector --------
   function bindPicker(rootId, attr, selectedClass) {
     const root = document.getElementById(rootId);
     if (!root) return () => null;
@@ -70,7 +70,6 @@
     };
   }
   const getPlan = bindPicker('plan-grid', 'plan', 'selected');
-  const getZone = bindPicker('zone-row', 'zone', 'selected');
 
   // -------- Subscribe form --------
   const form = document.getElementById('subscribe-form');
@@ -86,12 +85,6 @@
     'bagels-weekly': 'Bagels, weekly',
     bundle: 'The whole bundle',
   };
-  const zoneLabels = {
-    paia: 'Paia',
-    haiku: 'Haiku',
-    kuau: 'Kuau',
-    other: 'Somewhere else',
-  };
 
   if (form && success) {
     form.addEventListener('submit', async (e) => {
@@ -106,10 +99,6 @@
       emailErr.hidden = true;
       if (formErr) formErr.hidden = true;
 
-      const zoneVal = getZone() || 'paia';
-      const zoneLabel = zoneLabels[zoneVal] || 'Somewhere else';
-      const successZone =
-        zoneVal === 'other' ? 'your area' : zoneLabel;
       const planVal = getPlan() || 'loaf-weekly';
       const planLabel = planLabels[planVal] || planVal;
 
@@ -138,7 +127,7 @@
         payload.set('Name', name || '');
         payload.set('Email', email);
         payload.set('Plan', planLabel);
-        payload.set('Zone', zoneLabel);
+        payload.set('Delivery area', 'Spreckelsville / Paia, Maui');
 
         const res = await fetch(WEB3FORMS_ENDPOINT, {
           method: 'POST',
@@ -152,7 +141,6 @@
         document.getElementById('success-name').textContent =
           name || 'friend';
         document.getElementById('success-email').textContent = email;
-        document.getElementById('success-zone').textContent = successZone;
 
         form.classList.add('hidden');
         success.classList.remove('hidden');

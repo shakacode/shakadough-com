@@ -655,24 +655,13 @@ a { color: inherit; }
 }
 .plan-card .s { font-size: 12px; margin-top: 4px; opacity: 0.75; }
 
-.zone-row { display: flex; flex-wrap: wrap; gap: 8px; }
-.zone-btn {
-  padding: 10px 20px;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 700;
-  background: transparent;
-  color: var(--teal-deep);
-  border: 1.5px solid var(--teal-deep);
-  cursor: pointer;
-  transition: background 0.18s, color 0.18s;
-  font-family: inherit;
+.delivery-note p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink);
 }
-.zone-btn.selected {
-  background: var(--tan-deep);
-  color: var(--cream);
-  border-color: var(--tan-deep);
-}
+.delivery-note p strong { color: var(--teal-deep); }
 
 .subscribe-footer {
   display: flex; align-items: center; justify-content: space-between;
