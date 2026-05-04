@@ -1,0 +1,9 @@
+*
+!_headers
+!index.html
+!script.js
+!styles.css
+!assets/
+!assets/**
+!img/
+!img/**
