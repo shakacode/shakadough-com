@@ -92,12 +92,12 @@
       const name = form.elements.namedItem('name').value.trim();
       const email = form.elements.namedItem('email').value.trim();
       const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      if (formErr) formErr.hidden = true;
       if (!ok) {
         emailErr.hidden = false;
         return;
       }
       emailErr.hidden = true;
-      if (formErr) formErr.hidden = true;
 
       const planVal = getPlan() || 'loaf-weekly';
       const planLabel = planLabels[planVal] || planVal;
