@@ -120,10 +120,9 @@
         // Honeypot: real users won't fill this, bots that auto-fill every
         // field will, and Web3Forms drops those submissions.
         const botcheck = form.elements.namedItem('botcheck');
-        payload.set(
-          'botcheck',
-          botcheck && botcheck.checked ? 'true' : ''
-        );
+        if (botcheck && botcheck.checked) {
+          payload.set('botcheck', 'true');
+        }
         payload.set('Name', name || '');
         payload.set('Email', email);
         payload.set('Plan', planLabel);
