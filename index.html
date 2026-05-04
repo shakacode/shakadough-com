@@ -394,20 +394,25 @@
             </div>
           </div>
 
-          <div>
-            <label>Where on the north shore?</label>
-            <div class="zone-row" id="zone-row">
-              <button type="button" class="zone-btn selected" data-zone="paia">Paia</button>
-              <button type="button" class="zone-btn" data-zone="haiku">Haiku</button>
-              <button type="button" class="zone-btn" data-zone="kuau">Kuau</button>
-              <button type="button" class="zone-btn" data-zone="other">Somewhere else</button>
-            </div>
+          <div class="delivery-note">
+            <label>Delivery area</label>
+            <p>We deliver in <strong>Spreckelsville</strong> and <strong>Paia</strong>, Maui. If you are somewhere else on island, drop your email anyway and we will let you know if we expand.</p>
           </div>
+
+          <!-- Honeypot: bots that auto-fill every field will tick this; real users don't see it. Web3Forms drops submissions where it's set. -->
+          <input
+            type="checkbox"
+            class="botcheck"
+            name="botcheck"
+            tabindex="-1"
+            aria-hidden="true"
+          />
 
           <div class="subscribe-footer">
             <p class="nospam">No spam, ever.</p>
             <button type="submit" class="btn-tan">Hold my loaf →</button>
           </div>
+          <div class="form-error" id="form-err" role="alert" hidden></div>
         </form>
 
         <div id="subscribe-success" class="subscribe-success hidden" aria-live="polite">
@@ -423,7 +428,7 @@
           </svg>
           <span class="pill">✿ You are on the list</span>
           <h3>Mahalo, <span id="success-name">friend</span>.</h3>
-          <p>Your loaf has a name on it now. We will write to <strong id="success-email">you</strong> before the next bake day with pickup details for <span id="success-zone">your area</span>.</p>
+          <p>Your loaf has a name on it now. We will write to <strong id="success-email">you</strong> before the next bake day with pickup and delivery details for the Spreckelsville and Paia route.</p>
           <div class="star">In the meantime, the starter is fed and bubbling.</div>
           <button type="button" id="reset-form">↺ Add another</button>
         </div>
