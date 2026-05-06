@@ -15,13 +15,16 @@
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
 
-<link rel="icon" type="image/png" href="/assets/shakadough-logo.png" />
-<link rel="apple-touch-icon" href="/assets/shakadough-logo.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+
+<link rel="preload" as="image" href="/assets/shakadough-logo.webp" type="image/webp" fetchpriority="high" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Sacramento&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/styles.css?v=20260506-img-aspect" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&family=Sacramento&family=Work+Sans:wght@400;600;700&family=JetBrains+Mono&display=swap" media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&family=Sacramento&family=Work+Sans:wght@400;600;700&family=JetBrains+Mono&display=swap" /></noscript>
+<link rel="stylesheet" href="/styles.css?v=20260506-perf" />
 </head>
 <body>
 
@@ -29,7 +32,10 @@
 <nav class="nav">
   <div class="container nav-row">
     <a href="#top" class="nav-brand" aria-label="ShakaDough home">
-      <img src="/assets/shakadough-logo.png" alt="" />
+      <picture>
+        <source srcset="/assets/shakadough-logo.webp" type="image/webp" />
+        <img src="/assets/shakadough-logo.png" alt="" />
+      </picture>
       <span class="wm">Shaka<em>Dough</em></span>
     </a>
     <div class="nav-links">
@@ -83,7 +89,10 @@
   <div class="container hero-inner">
     <p class="hero-greeting">aloha mai kākou,</p>
 
-    <img src="/assets/shakadough-logo.png" alt="ShakaDough — The Aloha Sourdough" class="hero-logo bob" width="540" height="540" fetchpriority="high" />
+    <picture>
+      <source srcset="/assets/shakadough-logo.webp" type="image/webp" />
+      <img src="/assets/shakadough-logo.png" alt="ShakaDough — The Aloha Sourdough" class="hero-logo bob" width="540" height="540" fetchpriority="high" />
+    </picture>
 
     <p class="hero-lede">
       A small, naturally leavened bakery on the north shore of <strong>Maui</strong>. Wild starter raised in trade winds. Organic high-protein flour. Loaves and bagels, by subscription.
@@ -445,7 +454,10 @@
   <div class="container footer-inner">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="/assets/shakadough-logo.png" alt="" />
+        <picture>
+          <source srcset="/assets/shakadough-logo.webp" type="image/webp" />
+          <img src="/assets/shakadough-logo.png" alt="" loading="lazy" />
+        </picture>
         <div>
           <div class="wm">Shaka<em>Dough</em></div>
           <div class="tag">the aloha sourdough.</div>
