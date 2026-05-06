@@ -24,6 +24,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 img { max-width: 100%; height: auto; display: block; }
+picture { display: contents; }
 a { color: inherit; }
 ::selection { background: var(--tan); color: var(--cream); }
 
